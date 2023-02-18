@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Expense Calculator</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<div class="h-screen flex justify-around items-center">
+			<div class="flex flex-col items-center justify-center gap-10">
+				<ul
+					id="errors"
+					class="list-disc list-outside text-red-500"></ul>
+				<h1 class="font-extrabold text-4xl">Expense Calculator</h1>
+				<div class="bg-gray-300 px-5 py-2 rounded-md">
+					<label for="nameField">Name: </label>
+					<input
+						type="text"
+						name="nameField"
+						id="nameField"
+						class="rounded-md" />
+				</div>
+				<div class="bg-gray-300 px-5 py-2 rounded-md">
+					<label for="priceField">Price: </label>
+					<input
+						type="text"
+						name="priceField"
+						id="priceField"
+						class="rounded-md" />
+				</div>
+				<div class="flex gap-4">
+					<div>
+						<input
+							type="radio"
+							name="type"
+							id="expenseRadio"
+							value="0" />
+						<label for="expenseRadio">Expense</label>
+					</div>
+					<div>
+						<input
+							type="radio"
+							name="type"
+							id="incomeRadio"
+							value="1" />
+						<label for="incomeRadio">Income</label>
+					</div>
+				</div>
+				<input
+					type="button"
+					value="Reset"
+					id="resetButton"
+					class="bg-zinc-700 px-9 py-2 rounded-md text-white font-medium cursor-pointer" />
+				<input
+					type="button"
+					value="Add"
+					id="addButton"
+					class="bg-zinc-700 px-9 py-2 rounded-md text-white font-medium cursor-pointer" />
+				<div class="columns-2 gap-24">
+					<h3 class="font-extrabold text-lg">Income:</h3>
+					<h3 class="font-extrabold text-lg">Expenses:</h3>
+					<h3 class="font-extrabold text-lg">Balance:</h3>
+					<h3 class="font-extrabold text-lg" id="incomeAmount">0</h3>
+					<h3 class="font-extrabold text-lg" id="expenseAmount">0</h3>
+					<h3 class="font-extrabold text-lg" id="balanceAmount">0</h3>
+				</div>
+			</div>
+			<div id="record" class="flex flex-col gap-4 w-64"></div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
