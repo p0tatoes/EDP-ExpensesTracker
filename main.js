@@ -35,7 +35,6 @@ resetButton.addEventListener('click', () => {
 })
 
 addButton.addEventListener('click', () => {
-	// TODO: complete error validation
 	errors.classList.add('hidden')
 
 	let expenseName = nameField.value
@@ -65,7 +64,6 @@ addButton.addEventListener('click', () => {
 			'rounded-md'
 		)
 	} else {
-		// TODO: Add error message for no type selected
 		let errorMsg = ''
 		if (!expenseName) {
 			errorMsg += '<li>"Name" should not be empty</li>'
